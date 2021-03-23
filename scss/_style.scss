@@ -1,0 +1,42 @@
+
+//changes
+
+
+
+//personal Sass files, to make changes in the template of Bootstrap
+
+#logo-site{
+  width: 10vh;
+}
+
+#main-image{
+  max-width: 55%;
+  justify-content: center;
+}
+
+//images in the section
+
+
+.customers-img{
+  width: 100%;
+}
+
+.texto-de-inicio{
+  font-size: 1.5em;
+}
+
+//media query for md
+
+@media only screen and (min-width: 768px){
+  .services-text{
+    transform: translate(-200px,150px);
+  }
+
+  .customers-text{
+    transform: translate(200px,150px);
+  }
+
+  .texto-de-inicio{
+    font-size: 32px;
+  }
+}

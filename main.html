@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooom site</title>
+
+    <!--Css link-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Esta version de CDN no la estoy utilizando
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    -->
+
+</head>
+<body>
+
+ <!--nav bar-->
+
+      <nav class="navbar bg-secondary">
+        <a href="#" class="navbar-brand">
+          <img  class="" src="img/Logo-ooom.png" alt="logo de ooom" href="main.html" id="logo-site">
+        </a>
+        <!--login and access botons-->
+        <ul class="nav">
+
+          <!--Sign up options-->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Signup-modal" data-whatever="@fat">Sign up</button>
+          <!--Modal options-->
+          <div class="modal fade modal-sm" id="Signup-modal" tabindex="-1" role="dialog" aria-labelledby="Signup-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <!--Modal header-->
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Signup-modal">Sign up</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </button>
+                </div>
+                <!--Modal body-->
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Address</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Address 2</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+                <!--Modal footer-->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Login in options-->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal" data-whatever="@mdo">Login in</button>
+          <!--Modal options-->
+          <div class="modal fade modal-sm" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <!--Modal header-->
+                <div class="modal-header">
+                  <h5 class="modal-title" id="login-modal">Login in</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </button>
+                </div>
+                <!--Modal body-->
+                <div class="modal-body">
+                  <form class="form-group">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control w-50" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+
+                    </form>
+                  </form>
+                </div>
+                <!--Modal footer-->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--END login and access botons-->
+
+        <!--dropdown menu-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              <ion-icon name="menu-outline"></ion-icon>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right ">
+              <a class="dropdown-item text-primary" href="#">About us</a>
+              <a class="dropdown-item text-primary" href="#">Profile</a>
+              <a class="dropdown-item text-primary" href="#">Blog</a></div>
+          </li>
+        </ul>
+      <!-- ENDdropdown menu-->
+      </nav>
+  <!--End nav bar-->
+
+
+
+  <!--intro-->
+  <div class="container-fluid">
+    <div class="row">
+    <!-- col- elements here -->
+      <div class="col-12 mt-3 mb-3">
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <img  class="mx-auto" src="img/main-art.png" alt="Main image" href="#" id="main-image">
+          </div>
+
+          <div class="carousel-caption">
+            <form class="form-inline">
+              <input class="form-control col-10 text-primary" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-primary col-2" type="submit">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+              <h2 class="mt-2 mb-2 text-primary bg-secondary text-center texto-de-inicio">Buscas un servicio para tu hogar</h2>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End intro-->
+
+  <!--slider-->
+  <div class="container">
+    <div class="row">
+      <div class="">
+        <div class="carousel slide " data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/slider-1.jpg" alt="First slide">
+                <!--
+                <div class="bg-dark carousel-caption>
+                  <h5 class="text-light">Titel of service</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              -->
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider-2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider-3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider-4.jpg" alt="fourth slide">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End slider-->
+
+  <!--1 parte   -->
+  <div class="container-fluid bg-secondary">
+    <div class="container">
+      <div class="row pt-4 pb-4">
+        <div class="col-12 col-md-8">
+          <img class="img-fluid" src="img/services-you-need.jpg" alt="services you need">
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="bg-dark text-light services-text">
+            <h5>How we support you?</h5>
+            <p>we help you by finding does right people for the services you need </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--2 parte-->
+  <div class="container">
+    <div class="row mt-4 mb-4">
+      <div class="col-12 col-md-8 order-md-2">
+        <img class="img-fluid " src="img/finding-customers.jpg" alt="finding customers">
+      </div>
+      <div class="col-12 col-md-4 order-md-1">
+        <div class="bg-dark text-light customers-text">
+          <h5>Finding new customers is very easy!</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+  <div class="container-fluid bg-primary">
+    <footer class="pb-5 pt-3">
+      <div class="row">
+        <div class="col-12 col-md-3  offset-md-1 text-center text-md-left m">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item ">
+              <h3 class="text-light" href="#!">About us</h3>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Press room</a>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Investor Relations</a>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Global citizenship</a>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Security</a>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Blog</a>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Job opportunities</a>
+            </li>
+            <li class="nav-item ">
+              <a class="text-light"  href="#!">Gift cards</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="d-md-none">
+
+        <!--SUBCRIPTION-->
+        <div class="col-12 col-md-4 text-md-center mt-3">
+          <h3 class="text-light">Subscribe to the newsletter</h3>
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-2 col-form-label text-light">Email</label>
+              <div class="col-10">
+                <input type="email" class="form-control text-primary" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-10 offset-2">
+                <button type="submit" class="btn btn-secondary w-50">Sign in</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <hr class="d-md-none">
+
+        <!--social media-->
+        <div class="col-12 col-md-3 text-md-left mt-3">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <h3 class="text-light">Social media</h3>
+            </li>
+            <li class="nav-item">
+              <ion-icon name="logo-facebook" class="text-light text-center"></ion-icon>
+              <ion-icon name="logo-twitter" class="text-light"></ion-icon>
+              <ion-icon name="logo-twitter" class="text-light"></ion-icon>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- Icons-->
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+<!-- Esta version de Javascript es la que no estoy utlizando
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+
+</body>
+</html>
