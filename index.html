@@ -25,15 +25,16 @@
         <!--login and access botons-->
         <ul class="nav">
 
+          
           <!--Sign up options-->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Signup-modal" data-whatever="@fat">Sign up</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal" data-whatever="@fat">Sign up</button>
           <!--Modal options-->
-          <div class="modal fade" id="Signup-modal" tabindex="-1" role="dialog" aria-labelledby="Signup-modal" aria-hidden="true">
+          <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="Signup-modal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
+              <div class="modal-content" method="POST" action="registrado.html"  onsubmit="return registerValidate()" name="myForm" >
                 <!--Modal header-->
                 <div class="modal-header">
-                  <h5 class="modal-title" id="Signup-modal">Sign up</h5>
+                  <h5 class="modal-title" >Sign up</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <ion-icon name="close-outline"></ion-icon>
                   </button>
@@ -41,34 +42,90 @@
                 <!--Modal body-->
                 <div class="modal-body">
                   <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <div class="form-row"> 
+                      <div class="form-group col-md-12">
+                        <!-- user name-->
+                        <label for="inputn Email">Email</label>
+                        <input type="email" class="form-control" id="inputEmailLogin" placeholder="Email">
+                        <!-- validation-->
+                        <small>Error message</small>
                       </div>
                     </div>
+
+                    <div class="form-row"> 
+                      <div class="form-group col-md-6">
+                        <!--password-->
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <!-- validation-->
+                        <small>Error message</small>
+                      </div>
+
+                      <div class="form-group col-md-6 ">
+                        <!--password-->
+                        <label for="inputPassword4">Password validation</label>
+                        <input type="password" class="form-control" id="inputPasswordvalidation" placeholder="passwordValidation">
+                        <!-- validation-->
+                        <small>Error message</small>
+                      </div>
+                    </div>
+
+                    <div class="form-row"> 
+                      <div class="form-group col-md-6 sucessful">
+                            <!--First Name-->
+                            <label for="inputPassword4">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name" >
+                            <!-- validation-->
+                            <small class="ErrorfirstName">Error message</small>       
+                      </div>
+
+                      <div class="form-group col-md-6">
+                        <!--Surname-->
+                        <label for="Surname">Surname</label>
+                        <input type="text" class="form-control" id="surname" placeholder="Surname" >
+                        <!-- validation-->
+                        <small>Error message</small>
+                      </div>
+                    </div>
+
                     <div class="form-group">
+                      <!--address-->
                       <label for="inputAddress">Address</label>
                       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                     </div>
                     <div class="form-group">
+                      <!--address 2-->
                       <label for="inputAddress2">Address 2</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
+
                     <div class="form-row">
                       <div class="form-group col-md-6">
+                        <!--city-->
                         <label for="inputCity">City</label>
                         <input type="text" class="form-control" id="inputCity">
                       </div>
                       <div class="form-group col-md-4">
+                        <!--State--> 
                         <label for="inputState">State</label>
                         <select id="inputState" class="form-control">
-                          <option selected>Choose...</option>
-                          <option>...</option>
+                          <option selected>Cataluña</option>
+                          <option>País Vasco</option>
+                          <option>Galicia</option>
+                          <option>Andalucía</option>
+                          <option>Asturias</option>
+                          <option>Cantabria</option>
+                          <option>La Rioja</option>
+                          <option>Murcia</option>
+                          <option>Comunidad Valenciana</option>
+                          <option>Aragón</option>
+                          <option>Castilla-La Mancha</option>
+                          <option>Canarias</option>
+                          <option>Navarra</option>
+                          <option>Extremadura</option>
+                          <option>Baleares</option>
+                          <option>Comunidad de Madrid</option>
+                          <option>Castilla y León</option>
                         </select>
                       </div>
                       <div class="form-group col-md-2">
@@ -89,7 +146,7 @@
                 </div>
                 <!--Modal footer-->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
+                  <button type="submit" class="btn btn-primary" id="submitSignUp">Sign in</button>
                 </div>
               </div>
             </div>
@@ -112,18 +169,20 @@
                 <div class="modal-body">
                   <form class="form-group">
                     <form>
-                      <div class="form-group">
+                      <div class="form-group col-md-12">
+                        <!-- user name-->
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control w-50" id="LoginMail" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small>Error message</small>  
                       </div>
-                      <div class="form-group">
+                      <div class="form-group col-md-12">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control w-50" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control w-50" id="LoginPassword" placeholder="Password">
+                        <small>Error message</small>  
                       </div>
-                      <div class="form-check">
+                      <div class="form-check col-md-12">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
                       </div>
 
                     </form>
@@ -131,12 +190,13 @@
                 </div>
                 <!--Modal footer-->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="LoginSubmit">Submit</button>
                 </div>
               </div>
             </div>
           </div>
         <!--END login and access botons-->
+
 
         <!--dropdown menu-->
           <li class="nav-item dropdown">
@@ -315,6 +375,7 @@
 <!-- Bootstrap core JavaScript-->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
 
 <!-- Icons-->
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
